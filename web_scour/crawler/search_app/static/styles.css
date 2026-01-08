@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f3f4f6;
+}
+
+/* Page Centering */
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+
+/* Main Card */
+.card {
+    background-color: #ffffff;
+    width: 720px;
+    padding: 35px 45px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Title */
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Search Bar */
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+.search-form button {
+    padding: 10px 18px;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1a73e8;
+    color: white;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #1558b0;
+}
+
+/* Results Section */
+.results {
+    margin-top: 30px;
+}
+
+.results h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.results ul {
+    padding-left: 20px;
+}
+
+.results li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.results span {
+    margin-left: 8px;
+    color: #333;
+}

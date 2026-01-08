@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebScour Search Engine</title>
+
+    <!-- Flask static file linking -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="page">
+    <div class="card">
+
+        <h1 class="title">🔍 WebScour Search Engine</h1>
+
+        <form method="POST" class="search-form">
+            <input
+                type="text"
+                name="query"
+                placeholder="Search..."
+                value="{{ query }}"
+                required
+            >
+            <button type="submit">Search</button>
+        </form>
+
+        {% if results %}
+        <div class="results">
+            <h2>Results</h2>
+            <ul>
+                {% for doc, score in results %}
+                <li>
+                    <strong>{{ doc }}</strong>
+                    <span>Score: {{ "%.4f"|format(score) }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
+</body>
+</html>
